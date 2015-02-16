@@ -1,0 +1,19 @@
+{
+  "name": "StarFox-Travel-Agency",
+  "version": "0.0.0",
+  "homepage": "https://github.com/treindle/StarFox-Travel-Agency",
+  "authors": [
+    "Teresa Nededog <tnededog@my.hpu.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}
