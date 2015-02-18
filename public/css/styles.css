@@ -115,7 +115,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 71.25rem; }
+  max-width: 75rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -129,8 +129,8 @@ select {
     margin-right: 0; }
   .row .row {
     width: auto;
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+    margin-left: -1.46875rem;
+    margin-right: -1.46875rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
@@ -150,8 +150,8 @@ select {
         clear: both; }
 
 .column, .columns {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 1.46875rem;
+  padding-right: 1.46875rem;
   width: 100%;
   float: left; }
 
@@ -260,8 +260,8 @@ select {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; }
   .small-1 {
     width: 8.33333%; }
@@ -338,8 +338,8 @@ select {
     margin-left: 0;
     margin-right: 0; }
   .row.small-uncollapse > .column, .row.small-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; } }
 
 @media only screen and (min-width:40.063em) {
@@ -441,8 +441,8 @@ select {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; }
   .medium-1 {
     width: 8.33333%; }
@@ -519,8 +519,8 @@ select {
     margin-left: 0;
     margin-right: 0; }
   .row.medium-uncollapse > .column, .row.medium-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; }
   .push-0 {
     position: relative;
@@ -718,8 +718,8 @@ select {
     left: auto; }
   .column, .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; }
   .large-1 {
     width: 8.33333%; }
@@ -796,8 +796,8 @@ select {
     margin-left: 0;
     margin-right: 0; }
   .row.large-uncollapse > .column, .row.large-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.46875rem;
+    padding-right: 1.46875rem;
     float: left; }
   .push-0 {
     position: relative;
@@ -2190,7 +2190,7 @@ meta.foundation-mq-topbar {
     .top-bar.expanded {
       background: #333333; }
   .contain-to-grid .top-bar {
-    max-width: 71.25rem;
+    max-width: 75rem;
     margin: 0 auto;
     margin-bottom: 0; }
   .top-bar-section {
@@ -3041,9 +3041,11 @@ html {
       width: 170px; }
     .wrapper header .menu {
       font-weight: 200;
+      max-width: 1110px;
+      margin: auto;
       margin-bottom: -30px;
       padding-top: 20px;
-      border-radius: 7px;
+      border-radius: 5px;
       height: 66px;
       background-color: #444444;
       text-align: center;
@@ -3064,50 +3066,96 @@ html {
     padding-top: 50px;
     /*ends pitch*/
     /*ends rows*/ }
-    .wrapper .content .pitch.clearfix {
+    @media only screen and (max-width: 40em) {
+      .wrapper .content {
+        padding: 0 0 0 0;
+        background-color: #94C9C8; } }
+    .wrapper .content .pitch {
       width: auto;
       background-color: #94C9C8;
-      border-radius: 7px;
+      border-radius: 5px;
       display: inline-block;
       /*ends .pitch-text*/
       /*ends bull*/ }
-      .wrapper .content .pitch.clearfix .pitch-text {
+      .wrapper .content .pitch .ship2 {
+        background-image: url('/images/ship.png');
+        height: 150px;
+        width: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center -71px;
+        margin-top: -6px; }
+      .wrapper .content .pitch .ship3 {
+        background-image: url('/images/ship.png');
+        height: 150px;
+        width: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center -71px;
+        margin-top: -6px; }
+      .wrapper .content .pitch .pitch-text {
         text-align: left;
         color: #444444;
         width: 60%;
         float: left;
         /*ends p*/ }
-        .wrapper .content .pitch.clearfix .pitch-text p {
+        @media only screen and (max-width: 40em) {
+          .wrapper .content .pitch .pitch-text {
+            width: 100%;
+            float: none;
+            text-align: center; } }
+        @media only screen and (min-width:40.063em) and (max-width:64em) {
+          .wrapper .content .pitch .pitch-text {
+            width: 100%;
+            float: none;
+            text-align: center; } }
+        .wrapper .content .pitch .pitch-text p {
           font-size: 30px;
           font-weight: 100;
           margin-bottom: 50px;
           padding: 60px 0 0px 30px;
           letter-spacing: none; }
-      .wrapper .content .pitch.clearfix .bull {
+          @media only screen and (max-width: 40em) {
+            .wrapper .content .pitch .pitch-text p {
+              margin: 0 0 0 0;
+              padding: 60px 0 40px 0; } }
+      .wrapper .content .pitch .bull {
         float: right;
         margin-right: 40px;
         /*ends ship*/
         /*ends a*/ }
-        .wrapper .content .pitch.clearfix .bull .ship {
+        @media only screen and (max-width: 40em) {
+          .wrapper .content .pitch .bull {
+            float: none;
+            margin: 0 0 0 0;
+            padding: 0 0 60px 0; } }
+        @media only screen and (min-width:40.063em) and (max-width:64em) {
+          .wrapper .content .pitch .bull {
+            float: none;
+            padding: 0 0 60px 30px; } }
+        .wrapper .content .pitch .bull .ship {
           background-image: url("/images/ship.png");
           height: 220px;
           width: 350px;
           background-size: cover;
           background-position: center -71px;
           margin-top: -12px; }
-        .wrapper .content .pitch.clearfix .bull a {
+        .wrapper .content .pitch .bull a {
           font-weight: 200;
           font-size: 20px;
           display: inline-block;
           width: 300px;
           height: 70px;
           color: #EEEEEE;
-          background-color: #272727;
+          background-color: #444444;
           text-align: center;
           padding-top: 20px;
           /*ends hover*/ }
-          .wrapper .content .pitch.clearfix .bull a:hover {
-            background-color: #343434; }
+          @media only screen and (max-width: 40em) {
+            .wrapper .content .pitch .bull a {
+              width: 100%; } }
+          .wrapper .content .pitch .bull a:hover {
+            background-color: #535353; }
     .wrapper .content .row {
       display: block;
       color: #FFFFFF;
@@ -3117,6 +3165,9 @@ html {
       /* ends .to-the-moon */
       /* ends .just-around-earth */
       /* ends .just-center-deals*/ }
+      @media only screen and (min-width:40.063em) and (max-width:64em) {
+        .wrapper .content .row {
+          padding-bottom: 0; } }
       .wrapper .content .row h1 {
         color: #FFFFFF;
         font-weight: 300;
@@ -3142,10 +3193,36 @@ html {
         .wrapper .content .row .to-the-moon h4 {
           padding-bottom: 30px;
           border-bottom: groove #999999 2px; }
+        @media only screen and (min-width:40.063em) and (max-width:64em) {
+          .wrapper .content .row .to-the-moon {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 30px 0 20px 0;
+            text-align: left; }
+            .wrapper .content .row .to-the-moon h1 {
+              text-align: center;
+              padding-top: 40px;
+              width: 30%;
+              float: left;
+              margin-left: 60px; }
+            .wrapper .content .row .to-the-moon .medium-moon {
+              display: block;
+              border-left: groove #999999 2px;
+              padding: 50px 30px 50px 60px;
+              margin-left: 10px;
+              float: right;
+              width: 55%;
+              height: 225px; }
+              .wrapper .content .row .to-the-moon .medium-moon .show-for-medium {
+                padding-bottom: 0;
+                border-bottom: none; }
+              .wrapper .content .row .to-the-moon .medium-moon p {
+                padding: 0 30px 0 0;
+                margin: 0; } }
       .wrapper .content .row .just-around-earth {
         padding: 20px 0px 20px 0;
         background-color: #535353;
-        border-radius: 7px; }
+        border-radius: 5px; }
         .wrapper .content .row .just-around-earth p {
           padding-top: 30px; }
         .wrapper .content .row .just-around-earth h1 {
@@ -3155,10 +3232,35 @@ html {
         .wrapper .content .row .just-around-earth h4 {
           padding-bottom: 30px;
           border-bottom: groove #999999 2px; }
+        @media only screen and (min-width:40.063em) and (max-width:64em) {
+          .wrapper .content .row .just-around-earth {
+            padding: 0;
+            margin: 40px 0 40px 0;
+            text-align: left; }
+            .wrapper .content .row .just-around-earth h1 {
+              text-align: center;
+              width: 30%;
+              float: left;
+              margin-left: 60px;
+              padding-top: 50px; }
+            .wrapper .content .row .just-around-earth .medium-earth {
+              display: block;
+              border-left: groove #999999 2px;
+              padding: 60px 30px 40px 60px;
+              margin-left: 10px;
+              float: right;
+              width: 55%;
+              height: 225px; }
+              .wrapper .content .row .just-around-earth .medium-earth .show-for-medium {
+                padding-bottom: 0;
+                border-bottom: none; }
+              .wrapper .content .row .just-around-earth .medium-earth p {
+                padding: 0 30px 0 0;
+                margin: 0; } }
       .wrapper .content .row .just-center-deals {
         padding: 20px 0 0 0;
         background-color: #535353;
-        border-radius: 7px;
+        border-radius: 5px;
         /*ends deals*/ }
         .wrapper .content .row .just-center-deals p {
           margin-bottom: 0;
@@ -3174,7 +3276,6 @@ html {
         .wrapper .content .row .just-center-deals .deals {
           border-top: groove #999999 2px;
           padding-top: 10px;
-          padding-bottom: 10px;
           /* ends a*/ }
           .wrapper .content .row .just-center-deals .deals a {
             font-weight: 300;
@@ -3182,13 +3283,30 @@ html {
             color: #FFFFFF; }
             .wrapper .content .row .just-center-deals .deals a img {
               width: 40px; }
+    .wrapper .content .deal {
+      text-align: center;
+      padding: 20px 0 20px;
+      width: 100%;
+      background-color: #94C9C8; }
+      .wrapper .content .deal h3 {
+        margin-bottom: 0; }
+      .wrapper .content .deal a {
+        color: #FFFFFF; }
+      .wrapper .content .deal img {
+        width: 40px; }
   .wrapper .footer {
     color: #535353;
     padding-top: 40px;
     height: 100px;
     width: 100%;
     background-color: #2C2C2C;
-    text-align: center;
-    font-size: 15px; }
+    text-align: center; }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      .wrapper .footer {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        height: 110px; } }
+    .wrapper .footer p {
+      font-size: 14px; }
 
 /* ends wrapper class*/

@@ -25,6 +25,9 @@ html {
 
   
   header {
+
+
+    
     background: url("/images/header_bg.png");
     background-color: $primary-color;
     h1{ 
@@ -43,9 +46,11 @@ html {
 
   .menu {
     font-weight: 200;
+    max-width: 1110px;
+    margin: auto;
     margin-bottom: -30px;
     padding-top: 20px;
-    border-radius: 7px;
+    border-radius: 5px;
     height: 66px;
     background-color: $tuatara;
     text-align: center;
@@ -67,12 +72,51 @@ html {
 
   .content {
     padding-top: 50px;
-    .pitch.clearfix {
+
+      @media #{$small-only} {
+        padding: 0 0 0 0;
+        background-color: $primary-color;
+      
+    }
+
+    
+    .pitch {
       width: auto;
-    background-color: $primary-color;
-    border-radius: 7px; 
+      background-color: $primary-color;
+      border-radius: 5px; 
       display: inline-block;
+      .ship2 {
+        background-image: url('/images/ship.png');
+        height: 150px;
+        width: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center -71px;
+        margin-top: -6px;
+      }
+      .ship3 {
+        background-image: url('/images/ship.png');
+        height: 150px;
+        width: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center -71px;
+        margin-top: -6px;
+      }
+
     .pitch-text {
+    @media #{$small-only} {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    @media #{$medium-only}{
+      width: 100%;
+      float: none;
+      text-align: center;
+      }
+
       text-align: left; 
       color: $tuatara;
       width: 60%;
@@ -84,12 +128,27 @@ html {
         margin-bottom: 50px;
         padding: 60px 0 0px 30px;
         letter-spacing: none;
+
+        @media #{$small-only} {
+          margin: 0 0 0 0;
+          padding: 60px 0 40px 0;
+        }
       }/*ends p*/
     }/*ends .pitch-text*/
 
     .bull{
       float: right; 
       margin-right: 40px;  
+      @media #{$small-only} {
+        float: none;
+        margin: 0 0 0 0;
+        padding: 0 0 60px 0;
+      }
+
+      @media #{$medium-only}{
+        float: none;
+        padding: 0 0 60px 30px;
+      }
       .ship {
         background-image: url("/images/ship.png");
         height: 220px;
@@ -105,11 +164,16 @@ html {
         width: 300px;
         height: 70px;
         color: $smoke;
-        background-color: $selection;
+        background-color: $tuatara;
         text-align: center;
         padding-top: 20px;
+
+        @media #{$small-only} {
+          width: 100%;
+        }
+
         &:hover { 
-          background-color: $hover_color; 
+          background-color: $cells; 
         }/*ends hover*/
       }/*ends a*/
     }/*ends bull*/
@@ -117,6 +181,11 @@ html {
 
 
   .row{
+    @media #{$medium-only}{
+      padding-bottom: 0;
+    }
+
+
     display: block;
     color: $white;
     text-align: center;
@@ -140,9 +209,9 @@ html {
       margin-right: 20px;
       margin-left: 30px;
     }
-    .to-the-moon {
+    .to-the-moon {   
 
-      
+
       padding: 20px 0 20px 0;
       border-radius: 7px;
       background-color: $cells;
@@ -160,6 +229,39 @@ html {
         padding-bottom: 30px;
         border-bottom: groove $aluminum 2px; 
       }
+      @media #{$medium-only} {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 30px 0 20px 0;        
+        text-align: left;
+        
+        h1{
+          text-align: center;
+          padding-top: 40px;
+          width: 30%;
+          float: left;
+          margin-left: 60px;
+        }
+        .medium-moon {
+          display: block;
+          border-left: groove $aluminum 2px; 
+          padding: 50px 30px 50px 60px;
+          margin-left: 10px; 
+          float: right;
+          width: 55%;
+          height: 225px;
+
+          .show-for-medium {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+
+          p{
+            padding: 0 30px 0 0;
+            margin: 0;
+          }
+        }
+      }
     }/* ends .to-the-moon */
 
     .just-around-earth {
@@ -167,7 +269,7 @@ html {
 
       padding: 20px 0px 20px 0;
       background-color: $cells;
-      border-radius: 7px;
+      border-radius: 5px;
       p {
         padding-top: 30px;
       }
@@ -180,12 +282,45 @@ html {
         padding-bottom: 30px;
         border-bottom: groove $aluminum 2px; 
       }
+      @media #{$medium-only} {
+        padding: 0;
+        margin: 40px 0 40px 0;        
+        text-align: left;
+
+        h1{
+          text-align: center;
+          width: 30%;
+          float: left;
+          margin-left: 60px;
+          padding-top: 50px;
+        }
+        .medium-earth {
+          display: block;
+          border-left: groove $aluminum 2px; 
+          padding: 60px 30px 40px 60px;
+          margin-left: 10px; 
+          float: right;
+          width: 55%;
+          height: 225px;
+
+          .show-for-medium {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+
+          p{
+            padding: 0 30px 0 0;
+            margin: 0;
+            
+          }
+        }
+      }
     }/* ends .just-around-earth */
 
     .just-center-deals { 
       padding: 20px 0 0 0;
       background-color: $cells;
-      border-radius: 7px;      
+      border-radius: 5px;      
       p{
         margin-bottom: 0;
         font-weight: 400;
@@ -202,9 +337,11 @@ html {
         padding-top: 20px;
       }
       .deals{
+
+          
+
         border-top: groove $aluminum 2px;
         padding-top: 10px;
-        padding-bottom: 10px;
         a{ 
         font-weight: 300;
         font-size: 22px;
@@ -217,17 +354,43 @@ html {
       }/*ends deals*/
     }/* ends .just-center-deals*/
   } /*ends rows*/
+        .deal{
+          text-align: center;
+          padding: 20px 0 20px;          
+          width: 100%;
+          background-color: $primary-color;
+          h3{
+          margin-bottom: 0;
+          }
+          a{
+          color: $white;
+
+          }
+          img{
+            width: 40px;
+          }
+        }
+
 } /*ends content*/
 
 
 .footer {
+  @media #{$medium-only}{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    height: 110px;
+    }
+
   color: $cells;
   padding-top: 40px;
   height: 100px;
   width: 100%;
   background-color: $footer;
   text-align: center;
-  font-size: 15px;
-}
+  
+    p{
+      font-size: 14px;
+    }
+  }
 
 }/* ends wrapper class*/
